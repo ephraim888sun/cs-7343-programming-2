@@ -18,41 +18,144 @@ Perhaps the best option for simulating students programming—as well as the TA 
 Coverage of POSIX mutex locks and semaphores is provided in Section 7.3. Consult that section for details.
 
 
+run ```make compile2```
+
 Example Output
 ```
-Student 3 is programming.
-Student 3 is waiting for help.
-TA is helping Student 3.
-Student 5 is programming.
-Student 5 is waiting for help.
-TA is helping Student 5.
 Student 1 is programming.
-Student 1 is waiting for help.
-Student 2 is programming.
-Student 2 is waiting for help.
 Student 4 is programming.
-Student 4 is waiting for help.
-TA is helping Student 1.
+Student 2 is programming.
 Student 3 is programming.
-Student 3 is waiting for help.
+Student 2 is waiting for help.
+TA is waking up.
 TA is helping Student 2.
-Student 5 is programming.
-Student 5 is waiting for help.
+Student 1 is waiting for help.
+Student 3 is waiting for help.
+Student 4 is waiting for help.
+TA finishes helping Student 2.
+TA is helping Student 1.
+Student 2 is programming.
+TA finishes helping Student 1.
+TA is helping Student 3.
+Student 1 is programming.
+Student 2 is waiting for help.
+TA finishes helping Student 3.
 TA is helping Student 4.
-TA is helping Student 3.
-Student 1 is programming.
-Student 1 is waiting for help.
-TA is helping Student 5.
-Student 2 is programming.
-Student 2 is waiting for help.
 Student 3 is programming.
-Student 3 is waiting for help.
-TA is helping Student 1.
+TA finishes helping Student 4.
 TA is helping Student 2.
 Student 4 is programming.
+Student 1 is waiting for help.
+Student 3 is waiting for help.
+TA finishes helping Student 2.
+TA is helping Student 1.
+Student 2 is programming.
+TA finishes helping Student 1.
+TA is helping Student 3.
+Student 1 is programming.
 Student 4 is waiting for help.
+Student 2 is waiting for help.
+TA finishes helping Student 3.
+TA is helping Student 4.
+Student 3 is programming.
 ```
 
+```
+Student 1 is programming.
+Student 5 is programming.
+Student 6 is programming.
+Student 4 is programming.
+Student 7 is programming.
+Student 8 is programming.
+Student 3 is programming.
+Student 9 is programming.
+Student 2 is programming.
+Student 15 is programming.
+Student 10 is programming.
+Student 12 is programming.
+Student 17 is programming.
+Student 14 is programming.
+Student 16 is programming.
+Student 19 is programming.
+Student 11 is programming.
+Student 18 is programming.
+Student 20 is programming.
+Student 13 is programming.
+Student 9 is waiting for help.
+TA is waking up.
+TA is helping Student 9.
+Student 10 is waiting for help.
+Student 13 is waiting for help.
+Student 20 is waiting for help.
+No empty chairs. Student 8 returns to programming.
+Student 8 is programming.
+No empty chairs. Student 18 returns to programming.
+Student 18 is programming.
+No empty chairs. Student 17 returns to programming.
+Student 17 is programming.
+TA finishes helping Student 9.
+TA is helping Student 10.
+Student 9 is programming.
+Student 1 is waiting for help.
+No empty chairs. Student 14 returns to programming.
+Student 14 is programming.
+No empty chairs. Student 3 returns to programming.
+Student 3 is programming.
+No empty chairs. Student 19 returns to programming.
+Student 19 is programming.
+No empty chairs. Student 7 returns to programming.
+Student 7 is programming.
+No empty chairs. Student 2 returns to programming.
+Student 2 is programming.
+No empty chairs. Student 16 returns to programming.
+Student 16 is programming.
+No empty chairs. Student 19 returns to programming.
+Student 19 is programming.
+TA finishes helping Student 10.
+TA is helping Student 13.
+Student 10 is programming.
+Student 12 is waiting for help.
+No empty chairs. Student 11 returns to programming.
+Student 11 is programming.
+No empty chairs. Student 17 returns to programming.
+Student 17 is programming.
+No empty chairs. Student 14 returns to programming.
+Student 14 is programming.
+No empty chairs. Student 16 returns to programming.
+Student 16 is programming.
+No empty chairs. Student 4 returns to programming.
+Student 4 is programming.
+No empty chairs. Student 9 returns to programming.
+Student 9 is programming.
+No empty chairs. Student 5 returns to programming.
+Student 5 is programming.
+No empty chairs. Student 6 returns to programming.
+Student 6 is programming.
+No empty chairs. Student 15 returns to programming.
+Student 15 is programming.
+No empty chairs. Student 2 returns to programming.
+Student 2 is programming.
+No empty chairs. Student 17 returns to programming.
+Student 17 is programming.
+No empty chairs. Student 18 returns to programming.
+Student 18 is programming.
+No empty chairs. Student 16 returns to programming.
+Student 16 is programming.
+No empty chairs. Student 6 returns to programming.
+Student 6 is programming.
+TA finishes helping Student 13.
+TA is helping Student 20.
+Student 13 is programming.
+Student 18 is waiting for help.
+No empty chairs. Student 8 returns to programming.
+Student 8 is programming.
+No empty chairs. Student 19 returns to programming.
+Student 19 is programming.
+No empty chairs. Student 4 returns to programming.
+Student 4 is programming.
+No empty chairs. Student 3 returns to programming.
+Student 3 is programming.
+```
 
 ### Project 3: The Dining-Philosophers Problem
 In Section 7.1.3, we provide an outline of a solution to the dining-philosophers problem using monitors. This project involves implementing a solution to this problem using either POSIX mutex locks and condition variables or Java condition variables. Solutions will be based on the algorithm illustrated in Figure 7.7.

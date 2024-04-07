@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <cstdlib>
 
-const int NUM_STUDENTS = 5; // Number of students
+const int NUM_STUDENTS = 20; // Number of students
 const int CHAIRS = 3;       // Number of chairs in the hallway
 
 // Mutex and semaphores
