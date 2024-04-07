@@ -23,45 +23,6 @@ run ```make compile2```
 Example Output
 ```
 Student 1 is programming.
-Student 4 is programming.
-Student 2 is programming.
-Student 3 is programming.
-Student 2 is waiting for help.
-TA is waking up.
-TA is helping Student 2.
-Student 1 is waiting for help.
-Student 3 is waiting for help.
-Student 4 is waiting for help.
-TA finishes helping Student 2.
-TA is helping Student 1.
-Student 2 is programming.
-TA finishes helping Student 1.
-TA is helping Student 3.
-Student 1 is programming.
-Student 2 is waiting for help.
-TA finishes helping Student 3.
-TA is helping Student 4.
-Student 3 is programming.
-TA finishes helping Student 4.
-TA is helping Student 2.
-Student 4 is programming.
-Student 1 is waiting for help.
-Student 3 is waiting for help.
-TA finishes helping Student 2.
-TA is helping Student 1.
-Student 2 is programming.
-TA finishes helping Student 1.
-TA is helping Student 3.
-Student 1 is programming.
-Student 4 is waiting for help.
-Student 2 is waiting for help.
-TA finishes helping Student 3.
-TA is helping Student 4.
-Student 3 is programming.
-```
-
-```
-Student 1 is programming.
 Student 5 is programming.
 Student 6 is programming.
 Student 4 is programming.
@@ -158,11 +119,46 @@ Student 3 is programming.
 ```
 
 ### Project 3: The Dining-Philosophers Problem
-In Section 7.1.3, we provide an outline of a solution to the dining-philosophers problem using monitors. This project involves implementing a solution to this problem using either POSIX mutex locks and condition variables or Java condition variables. Solutions will be based on the algorithm illustrated in Figure 7.7.
-Both implementations will require creating five philosophers, each identi- fied by a number 0..4. Each philosopher will run as a separate thread. Philoso- phers alternate between thinking and eating. To simulate both activities, have each thread sleep for a random period between one and three seconds.
+Dining-Philosophers Problem Outline:
+Consider five philosophers who spend their lives thinking and eating. The philosophers share a circular table surrounded by five chairs, each belonging to one philosopher. In the center of the table is a bowl of rice, and the table is laid with five single chopsticks (Figure 7.5). When a philosopher thinks, she does not interact with her colleagues. From time to time, a philosopher gets hungry and tries to pick up the two chopsticks that are closest to her (the chopsticks that are between her and her left and right neighbors). A philosopher may pick up only one chopstick at a time. Obviously, she cannot pick up a chopstick that is already in the hand of a neighbor. When a hungry philosopher has both her chopsticks at the same time, she eats without releasing the chopsticks. When she is finished eating, she puts down both chopsticks and starts thinking again. The dining-philosophers problem is considered a classic synchronization problem neither because of its practical importance nor because computer scientists dislike philosophers but because it is an example of a large class of concurrency-control problems. It is a simple representation of the need
+
+In Section 7.1.3, we provide an outline of a solution to the dining-philosophers problem using monitors. This project involves implementing a solution to this problem using either POSIX mutex locks and condition variables or Java condition variables. Solutions will be based on the algorithm illustrated in Figure 7.7. Both implementations will require creating five philosophers, each identified by a number 0 .. 4. Each philosopher will run as a separate thread. Philosophers alternate between thinking and eating. To simulate both activities, have each thread sleep for a random period between one and three seconds.
+
 I. POSIX
-Thread creation using Pthreads is covered in Section 4.4.1. When a philosopher wishes to eat, she invokes the function
-pickup forks (int philosopher_number)
-where philosopher_number identifies the number of the philosopher wishing to eat. When a philosopher finishes eating, she invokes
-return_forks (int philosopher_number)
+Thread creation using Pthreads is covered in Section 4.4.1. When a philosopher wishes to eat, she invokes the function pickup forks (int philosopher_number) where philosopher_number identifies the number of the philosopher wishing to eat. When a philosopher finishes eating, she invokes return_forks (int philosopher_number)
 Your implementation will require the use of POSIX condition variables, which are covered in Section 7.3.
+
+
+run ```make compile3```
+
+Output:
+```
+Philosopher 0 is thinking.
+Philosopher 4 is thinking.
+Philosopher 2 is thinking.
+Philosopher 1 is thinking.
+Philosopher 3 is thinking.
+Philosopher 1 is eating.
+Philosopher 3 is eating.
+Philosopher 1 is thinking.
+Philosopher 0 is eating.
+Philosopher 3 is thinking.
+Philosopher 2 is eating.
+Philosopher 2 is thinking.
+Philosopher 0 is thinking.
+Philosopher 4 is eating.
+Philosopher 1 is eating.
+Philosopher 4 is thinking.
+Philosopher 3 is eating.
+Philosopher 1 is thinking.
+Philosopher 3 is thinking.
+Philosopher 2 is eating.
+Philosopher 0 is eating.
+Philosopher 2 is thinking.
+Philosopher 0 is thinking.
+Philosopher 4 is eating.
+Philosopher 4 is thinking.
+Philosopher 3 is eating.
+Philosopher 3 is thinking.
+Philosopher 2 is eating.
+```
