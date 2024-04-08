@@ -20,102 +20,86 @@ Coverage of POSIX mutex locks and semaphores is provided in Section 7.3. Consult
 
 run ```make compile2```
 
-Example Output
+This example is n = 20 students with 3 chairs. You can modify accorindingly in project2-sleeping-teaching-assistant/main.cpp
+
+Output: ![output2](images/output2.png)
 ```
+make compile2
+clang++ -g -std=c++14 project2-sleeping-teaching-assistant/*.cpp -o output
+./output
 Student 1 is programming.
-Student 5 is programming.
-Student 6 is programming.
 Student 4 is programming.
-Student 7 is programming.
-Student 8 is programming.
-Student 3 is programming.
 Student 9 is programming.
-Student 2 is programming.
+Student 14 is programming.
+Student 3 is programming.
 Student 15 is programming.
+Student 7 is programming.
+Student 17 is programming.
+Student 8 is programming.
+Student 18 is programming.
+Student 19 is programming.
+Student 6 is programming.
+Student 13 is programming.
+Student 16 is programming.
+Student 2 is programming.
+Student 5 is programming.
 Student 10 is programming.
 Student 12 is programming.
-Student 17 is programming.
-Student 14 is programming.
-Student 16 is programming.
-Student 19 is programming.
-Student 11 is programming.
-Student 18 is programming.
 Student 20 is programming.
-Student 13 is programming.
-Student 9 is waiting for help.
+Student 11 is programming.
+Student 7 is waiting for help.
 TA is waking up.
-TA is helping Student 9.
-Student 10 is waiting for help.
-Student 13 is waiting for help.
-Student 20 is waiting for help.
-No empty chairs. Student 8 returns to programming.
-Student 8 is programming.
+TA is helping Student 7.
+Student 19 is waiting for help.
+Student 6 is waiting for help.
+Student 17 is waiting for help.
+No empty chairs. Student 20 returns to programming.
+Student 20 is programming.
+No empty chairs. Student 16 returns to programming.
+Student 16 is programming.
 No empty chairs. Student 18 returns to programming.
 Student 18 is programming.
-No empty chairs. Student 17 returns to programming.
-Student 17 is programming.
-TA finishes helping Student 9.
-TA is helping Student 10.
-Student 9 is programming.
-Student 1 is waiting for help.
-No empty chairs. Student 14 returns to programming.
-Student 14 is programming.
+TA finishes helping Student 7.
+TA is helping Student 19.
+Student 7 is programming.
+Student 20 is waiting for help.
 No empty chairs. Student 3 returns to programming.
 Student 3 is programming.
-No empty chairs. Student 19 returns to programming.
-Student 19 is programming.
-No empty chairs. Student 7 returns to programming.
-Student 7 is programming.
-No empty chairs. Student 2 returns to programming.
-Student 2 is programming.
-No empty chairs. Student 16 returns to programming.
-Student 16 is programming.
-No empty chairs. Student 19 returns to programming.
-Student 19 is programming.
-TA finishes helping Student 10.
-TA is helping Student 13.
+No empty chairs. Student 10 returns to programming.
 Student 10 is programming.
-Student 12 is waiting for help.
-No empty chairs. Student 11 returns to programming.
-Student 11 is programming.
-No empty chairs. Student 17 returns to programming.
-Student 17 is programming.
-No empty chairs. Student 14 returns to programming.
-Student 14 is programming.
-No empty chairs. Student 16 returns to programming.
-Student 16 is programming.
-No empty chairs. Student 4 returns to programming.
-Student 4 is programming.
 No empty chairs. Student 9 returns to programming.
 Student 9 is programming.
+No empty chairs. Student 11 returns to programming.
+Student 11 is programming.
 No empty chairs. Student 5 returns to programming.
 Student 5 is programming.
-No empty chairs. Student 6 returns to programming.
-Student 6 is programming.
-No empty chairs. Student 15 returns to programming.
-Student 15 is programming.
 No empty chairs. Student 2 returns to programming.
 Student 2 is programming.
-No empty chairs. Student 17 returns to programming.
-Student 17 is programming.
-No empty chairs. Student 18 returns to programming.
-Student 18 is programming.
-No empty chairs. Student 16 returns to programming.
-Student 16 is programming.
-No empty chairs. Student 6 returns to programming.
-Student 6 is programming.
-TA finishes helping Student 13.
-TA is helping Student 20.
-Student 13 is programming.
-Student 18 is waiting for help.
-No empty chairs. Student 8 returns to programming.
-Student 8 is programming.
-No empty chairs. Student 19 returns to programming.
-Student 19 is programming.
-No empty chairs. Student 4 returns to programming.
-Student 4 is programming.
 No empty chairs. Student 3 returns to programming.
 Student 3 is programming.
+No empty chairs. Student 13 returns to programming.
+Student 13 is programming.
+No empty chairs. Student 4 returns to programming.
+Student 4 is programming.
+No empty chairs. Student 14 returns to programming.
+Student 14 is programming.
+No empty chairs. Student 8 returns to programming.
+Student 8 is programming.
+No empty chairs. Student 16 returns to programming.
+Student 16 is programming.
+No empty chairs. Student 15 returns to programming.
+Student 15 is programming.
+No empty chairs. Student 10 returns to programming.
+Student 10 is programming.
+TA finishes helping Student 19.
+TA is helping Student 6.
+Student 19 is programming.
+Student 1 is waiting for help.
+No empty chairs. Student 12 returns to programming.
+Student 12 is programming.
+No empty chairs. Student 2 returns to programming.
+Student 2 is programming.
+^Cmake: *** [compile2] Interrupt: 2
 ```
 
 ### Project 3: The Dining-Philosophers Problem
@@ -131,34 +115,103 @@ Your implementation will require the use of POSIX condition variables, which are
 
 run ```make compile3```
 
-Output:
+Output: ![output3](images/output3.png)
+
 ```
 Philosopher 0 is thinking.
-Philosopher 4 is thinking.
+Philosopher 1 is thinking.
 Philosopher 2 is thinking.
-Philosopher 1 is thinking.
 Philosopher 3 is thinking.
-Philosopher 1 is eating.
+Philosopher 4 is thinking.
 Philosopher 3 is eating.
-Philosopher 1 is thinking.
 Philosopher 0 is eating.
 Philosopher 3 is thinking.
 Philosopher 2 is eating.
-Philosopher 2 is thinking.
 Philosopher 0 is thinking.
 Philosopher 4 is eating.
+Philosopher 4 is thinking.
+Philosopher 2 is thinking.
 Philosopher 1 is eating.
-Philosopher 4 is thinking.
-Philosopher 3 is eating.
 Philosopher 1 is thinking.
-Philosopher 3 is thinking.
-Philosopher 2 is eating.
 Philosopher 0 is eating.
-Philosopher 2 is thinking.
 Philosopher 0 is thinking.
 Philosopher 4 is eating.
-Philosopher 4 is thinking.
 Philosopher 3 is eating.
+Philosopher 4 is thinking.
 Philosopher 3 is thinking.
 Philosopher 2 is eating.
+Philosopher 4 is eating.
+Philosopher 4 is thinking.
+Philosopher 2 is thinking.
+Philosopher 1 is eating.
+Philosopher 1 is thinking.
+Philosopher 0 is eating.
+Philosopher 0 is thinking.
+Philosopher 4 is eating.
+Philosopher 3 is eating.
+Philosopher 4 is thinking.
+Philosopher 3 is thinking.
+Philosopher 2 is eating.
+Philosopher 2 is thinking.
+Philosopher 1 is eating.
+```
+
+
+### Project 4: The Producer - Consumer Problem
+In Section 7.1.1, we presented a semaphore-based solution to the producer-consumer problem using a bounded buffer. In this project, you will design a programming solution to the bounded-buffer problem using the producer and consumer processes shown in Figures 5.9 and 5.10. The solution presented in Section 7.1.1 uses three semaphores: empty and full, which count the number of empty and full slots in the buffer, and mutex, which is a binary (or mutual- exclusion) semaphore that protects the actual insertion or removal of items in the buffer. For this project, you will use standard counting semaphores for empty and full and a mutex lock, rather than a binary semaphore, to represent mutex. The producer and consumer-running as separate threads —will move items to and from a buffer that is synchronized with the empty, full, and mutex structures. You can solve this problem using either Pthreads or the Windows API.
+
+run ```make compile4 ARGS="10 2 10"```
+
+Output: ![output4](images/output4.png)
+
+```
+consumer consumed 0
+consumer consumed 0
+producer produced 114807987
+producer produced 1137522503
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+producer produced 893351816
+producer produced 1505795335
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+producer produced 1399125485
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+producer produced 510616708
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+consumer consumed 0
+producer produced 1108728549
+consumer consumed 0
+producer produced 1060806853
+consumer consumed 0
+consumer consumed 0
 ```
